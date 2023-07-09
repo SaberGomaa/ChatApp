@@ -69,6 +69,7 @@
             btn_send.TabIndex = 3;
             btn_send.Text = "Send";
             btn_send.UseVisualStyleBackColor = true;
+            btn_send.Click += btn_send_Click;
             // 
             // btn_join
             // 
@@ -78,6 +79,7 @@
             btn_join.TabIndex = 4;
             btn_join.Text = "Join";
             btn_join.UseVisualStyleBackColor = true;
+            btn_join.Click += btn_join_Click;
             // 
             // btn_send_grp
             // 
@@ -87,6 +89,7 @@
             btn_send_grp.TabIndex = 5;
             btn_send_grp.Text = "Send To Group";
             btn_send_grp.UseVisualStyleBackColor = true;
+            btn_send_grp.Click += btn_send_grp_Click;
             // 
             // list_msg
             // 
