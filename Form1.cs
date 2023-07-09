@@ -31,6 +31,25 @@ namespace ChatApp
             list_msg.Items.Add(name + " Send Message " + message + " To Group" + groupName))));
 
         }
-        
+        private void btn_send_Click(object sender, EventArgs e)
+        {
+            _proxy.Invoke("sendMessage", new message()
+            {
+                Name = txt_name.Text,
+                Date = DateTime.Now,
+                MessageContent = txt_msg.Text
+            });
+        }
+
+        private void btn_join_Click(object sender, EventArgs e)
+        {
+            _proxy.Invoke("joinGroup", txt_grp.Text, txt_name.Text);
+
+        }
+
+        private void btn_send_grp_Click(object sender, EventArgs e)
+        {
+            _proxy.Invoke("sendGroupMessage", txt_grp.Text, txt_msg.Text, txt_name.Text);
+        }
     }
 }
